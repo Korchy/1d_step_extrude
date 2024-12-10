@@ -124,7 +124,8 @@ class StepExtrudeKeyMap:
 
 def register(ui=True):
     register_class(StepExtrude_OT_step_extrude)
-    StepExtrudeKeyMap.register(context=bpy.context)
+    # default keymap commented by Paul until he finds more consistent key combination
+    # StepExtrudeKeyMap.register(context=bpy.context)
     if ui:
         register_class(StepExtrude_PT_panel)
 
@@ -132,7 +133,7 @@ def register(ui=True):
 def unregister(ui=True):
     if ui:
         unregister_class(StepExtrude_PT_panel)
-    StepExtrudeKeyMap.unregister()
+    # StepExtrudeKeyMap.unregister()
     unregister_class(StepExtrude_OT_step_extrude)
 
 
